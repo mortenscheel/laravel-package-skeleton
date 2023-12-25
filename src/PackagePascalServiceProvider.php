@@ -11,7 +11,7 @@ class PackagePascalServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/:package_slug.php', ':package_slug');
+        $this->mergeConfigFrom(__DIR__.'/../config/:package_slug.php', ':package_slug');
     }
 
     /**
@@ -27,7 +27,7 @@ class PackagePascalServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             // Publishing the configuration file.
             $this->publishes([
-                __DIR__ . '/../config/:package_slug.php' => config_path(':package_slug.php'),
+                __DIR__.'/../config/:package_slug.php' => config_path(':package_slug.php'),
             ], ':package_slug.config');
 
             // Publishing the views.
